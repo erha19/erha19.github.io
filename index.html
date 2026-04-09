@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ping Island | Dynamic Island for AI Coding Sessions</title>
+    <meta
+      name="description"
+      content="Ping Island is a macOS menu bar app that turns coding-agent interruptions into a Dynamic Island-style control surface."
+    />
+    <meta
+      name="keywords"
+      content="Ping Island, macOS, Dynamic Island, Claude Code, Codex, Gemini CLI, AI coding"
+    />
+    <meta property="og:title" content="Ping Island" />
+    <meta
+      property="og:description"
+      content="A Dynamic Island-style AI coding session monitor for the macOS menu bar."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/notch-panel.png" />
+    <link rel="icon" href="./assets/ping-island-icon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&amp;family=Share+Tech+Mono&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="scanline"></div>
+    <div class="noise"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Ping Island home">
+        <img src="./assets/ping-island-icon.svg" alt="" />
+        <div>
+          <strong>PING ISLAND</strong>
+          <span>Dynamic Island for coding agents</span>
+        </div>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#clients">Clients</a>
+        <a href="#install">Install</a>
+      </nav>
+
+      <a
+        class="button button-secondary button-chamfer"
+        href="https://github.com/erha19/ping-island"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Star on GitHub
+      </a>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-copy">
+          <p class="eyebrow">macOS notch control surface // live agent ops</p>
+          <h1 class="hero-title glitch" data-text="DON'T BABYSIT TERMINAL TABS.">
+            DON'T BABYSIT TERMINAL TABS.
+          </h1>
+          <p class="hero-subtitle">
+            Ping Island turns Claude Code, Codex, Gemini CLI, OpenCode, Cursor,
+            Qoder, CodeBuddy, and Copilot interruptions into a native
+            Dynamic Island-style panel with approvals, replies, completions, and
+            one-click return to the right terminal or IDE.
+          </p>
+
+          <div class="hero-actions">
+            <a
+              class="button button-primary button-chamfer glitch-button"
+              href="https://github.com/erha19/ping-island/releases"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Download Latest Release
+            </a>
+            <a
+              class="button button-outline button-chamfer"
+              href="https://github.com/erha19/ping-island"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Guide Me to Star
+            </a>
+          </div>
+
+          <div class="terminal-card panel terminal-panel button-chamfer">
+            <div class="terminal-bar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="terminal-body">
+              <p><span>&gt;</span> attention.required // surfaced in the notch</p>
+              <p><span>&gt;</span> approve, deny, reply // without tab hunting</p>
+              <p><span>&gt;</span> jump back to iTerm2, Ghostty, tmux, VS Code</p>
+              <p><span>&gt;</span> if this saves your flow, star the repo<span class="cursor"></span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hud panel button-chamfer">
+            <div class="hud-frame">
+              <div class="hud-tag">LIVE PREVIEW</div>
+              <img
+                class="hero-image"
+                src="./assets/notch-panel.png"
+                alt="Ping Island notch panel preview"
+              />
+              <div class="hud-grid"></div>
+            </div>
+
+            <div class="hud-meta">
+              <div class="hud-chip">CLAUDE CODE</div>
+              <div class="hud-chip secondary">CODEX</div>
+              <div class="hud-chip tertiary">GEMINI CLI</div>
+            </div>
+          </div>
+
+          <div class="mascot-strip panel button-chamfer">
+            <img src="./assets/mascots/claude.gif" alt="Claude mascot" />
+            <img src="./assets/mascots/codex.gif" alt="Codex mascot" />
+            <img src="./assets/mascots/gemini.gif" alt="Gemini mascot" />
+            <img src="./assets/mascots/opencode.gif" alt="OpenCode mascot" />
+            <img src="./assets/mascots/cursor.gif" alt="Cursor mascot" />
+            <img src="./assets/mascots/qoder.gif" alt="Qoder mascot" />
+            <img src="./assets/mascots/codebuddy.gif" alt="CodeBuddy mascot" />
+            <img src="./assets/mascots/copilot.gif" alt="Copilot mascot" />
+          </div>
+        </div>
+      </section>
+
+      <section class="stats section">
+        <div class="stat panel button-chamfer">
+          <strong>8+</strong>
+          <span>Client families tracked in one surface</span>
+        </div>
+        <div class="stat panel button-chamfer">
+          <strong>macOS 14+</strong>
+          <span>Native menu bar and notch-first experience</span>
+        </div>
+        <div class="stat panel button-chamfer">
+          <strong>Hooks + App Server</strong>
+          <span>Claude-style hooks, Codex live threads, IDE routes</span>
+        </div>
+        <div class="stat panel button-chamfer">
+          <strong>One-click return</strong>
+          <span>Back to the exact terminal, tmux pane, or IDE window</span>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">system modules</p>
+          <h2>Built for the interruptions that actually break flow.</h2>
+        </div>
+
+        <div class="feature-grid">
+          <article class="panel feature-card button-chamfer">
+            <p class="feature-kicker">01 // attention-first UI</p>
+            <h3>Stay compact until a session demands a decision.</h3>
+            <p>
+              The UI remains quiet until approvals, follow-up questions, review
+              prompts, completions, or failures need a real response.
+            </p>
+          </article>
+
+          <article class="panel feature-card button-chamfer">
+            <p class="feature-kicker">02 // act from the notch</p>
+            <h3>Approve tools, deny requests, and answer without context loss.</h3>
+            <p>
+              Ping Island keeps the action loop inside a native surface so you
+              do not have to chase a hidden terminal tab to unblock the run.
+            </p>
+          </article>
+
+          <article class="panel feature-card button-chamfer">
+            <p class="feature-kicker">03 // focus return</p>
+            <h3>Jump to the exact workspace that spawned the interruption.</h3>
+            <p>
+              iTerm2, Ghostty, Terminal.app, tmux panes, and VS Code-style IDEs
+              all route back through one control layer.
+            </p>
+          </article>
+
+          <article class="panel feature-card button-chamfer">
+            <p class="feature-kicker">04 // codex aware</p>
+            <h3>Works across Codex hooks, app-server threads, and rollout fallbacks.</h3>
+            <p>
+              Codex is not bolted on. Ping Island monitors both hook traffic and
+              live app-server state so active sessions stay coherent.
+            </p>
+          </article>
+
+          <article class="panel feature-card button-chamfer">
+            <p class="feature-kicker">05 // custom signals</p>
+            <h3>Swap sounds, mascots, and per-client personality.</h3>
+            <p>
+              Tune the app to your own workflow with event-specific sounds,
+              imported packs, and animated mascot overrides.
+            </p>
+          </article>
+
+          <article class="panel feature-card button-chamfer holographic">
+            <p class="feature-kicker">06 // open source</p>
+            <h3>Independent, native, and transparent.</h3>
+            <p>
+              Ping Island is an open-source alternative for people who want a
+              local macOS control surface instead of another web dashboard.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="workflow" class="section split-section">
+        <div class="section-heading">
+          <p class="eyebrow">terminal behavior</p>
+          <h2>Interrupts belong in the notch, not buried in a forgotten pane.</h2>
+        </div>
+
+        <div class="split-layout">
+          <div class="terminal-card panel button-chamfer large-terminal">
+            <div class="terminal-bar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="terminal-body">
+              <p>$ session.watch --provider codex --ide cursor</p>
+              <p>$ attention popup --reason "tool approval required"</p>
+              <p>$ notch.render --mode intervention</p>
+              <p>$ focus.return --target tmux:pane-3</p>
+              <p>$ session.resume --status active<span class="cursor"></span></p>
+            </div>
+          </div>
+
+          <div class="question-panel panel button-chamfer">
+            <img
+              src="./assets/question-panel.png"
+              alt="Ping Island question panel preview"
+            />
+            <div class="question-copy">
+              <p class="feature-kicker">native intervention layer</p>
+              <h3>When the run asks a question, you answer from the menu bar.</h3>
+              <p>
+                Approvals, input requests, and follow-ups surface with enough
+                context to act immediately, then route you back to the right
+                workspace only when you need full-screen control.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="clients" class="section clients-section">
+        <div class="section-heading">
+          <p class="eyebrow">supported clients</p>
+          <h2>One island for the whole agent stack.</h2>
+        </div>
+
+        <div class="clients-panel panel button-chamfer">
+          <img
+            class="poster"
+            src="./assets/ping-island-mascot-poster.png"
+            alt="Ping Island supported tools poster"
+          />
+          <div class="client-tags">
+            <span>Claude Code</span>
+            <span>Codex</span>
+            <span>Gemini CLI</span>
+            <span>OpenCode</span>
+            <span>Cursor</span>
+            <span>Qoder</span>
+            <span>CodeBuddy</span>
+            <span>GitHub Copilot</span>
+            <span>VS Code-compatible IDE routes</span>
+            <span>tmux-aware terminal focus</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="install" class="section install-section">
+        <div class="section-heading">
+          <p class="eyebrow">deployment path</p>
+          <h2>Install fast. Monitor everything. Stop tab babysitting.</h2>
+        </div>
+
+        <div class="install-grid">
+          <article class="panel install-card button-chamfer">
+            <p class="feature-kicker">release path</p>
+            <h3>Download the latest DMG.</h3>
+            <ol>
+              <li>Grab the newest package from GitHub Releases.</li>
+              <li>Move <code>Ping Island.app</code> into Applications.</li>
+              <li>Launch and enable the clients you want to monitor.</li>
+            </ol>
+            <a
+              class="button button-primary button-chamfer"
+              href="https://github.com/erha19/ping-island/releases"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open Releases
+            </a>
+          </article>
+
+          <article class="panel install-card button-chamfer">
+            <p class="feature-kicker">source path</p>
+            <h3>Build it yourself if you want full control.</h3>
+            <pre><code>git clone https://github.com/erha19/ping-island.git
+cd ping-island
+xcodebuild -project PingIsland.xcodeproj \
+  -scheme PingIsland \
+  -configuration Release build</code></pre>
+            <a
+              class="button button-outline button-chamfer"
+              href="https://github.com/erha19/ping-island"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View Source
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section star-section">
+        <div class="panel star-panel button-chamfer">
+          <p class="eyebrow">support the project</p>
+          <h2>If Ping Island sharpens your coding loop, star the repo.</h2>
+          <p>
+            The project is open source, native, and intentionally focused on the
+            control moments that break concentration. A GitHub star helps more
+            people discover it.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="button button-primary button-chamfer glitch-button"
+              href="https://github.com/erha19/ping-island"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Star Ping Island
+            </a>
+            <a
+              class="button button-secondary button-chamfer"
+              href="https://github.com/erha19/ping-island/releases"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Get the App
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>PING ISLAND // OPEN SOURCE MACOS AGENT MONITOR</p>
+      <p>© <span id="year"></span> Dan Wu</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

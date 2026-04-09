@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="128" y1="128" x2="896" y2="896" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FEF3DE"/>
+      <stop offset="0.5" stop-color="#FFF8ED"/>
+      <stop offset="1" stop-color="#FCEBD4"/>
+    </linearGradient>
+    <radialGradient id="haloCore" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) rotate(90) scale(196)">
+      <stop offset="0.34" stop-color="#FFF9EF" stop-opacity="0"/>
+      <stop offset="0.58" stop-color="#FFD784" stop-opacity="0.72"/>
+      <stop offset="0.8" stop-color="#FFB23F" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#F58A1F"/>
+    </radialGradient>
+    <radialGradient id="haloFill" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) rotate(90) scale(196)">
+      <stop offset="0.55" stop-color="#FFF7E7" stop-opacity="0"/>
+      <stop offset="0.7" stop-color="#FFE3A7" stop-opacity="0.5"/>
+      <stop offset="0.88" stop-color="#FFB94E" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#F28A1A"/>
+    </radialGradient>
+  </defs>
+  <rect x="64" y="64" width="896" height="896" rx="220" fill="url(#bg)"/>
+  <circle cx="512" cy="512" r="196" fill="url(#haloFill)"/>
+  <circle cx="512" cy="512" r="108" fill="url(#bg)"/>
+  <circle cx="512" cy="512" r="196" stroke="url(#haloCore)" stroke-width="24"/>
+</svg>
